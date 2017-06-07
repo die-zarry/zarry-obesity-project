@@ -5,8 +5,12 @@
  */
 package obesity.fight;
 
-
 import citbyui.cit260.obesity.view.StartProgramView;
+
+
+
+
+
 
 /**
  *
@@ -19,11 +23,9 @@ public class Obesity {
      */
     public static void main(String[] args) {
     
-   // creat StartProgramView0rig and display start program view
-   
-    StartProgramView startProgramView = new StartProgramView();
-    startProgramView.displayStartProgramView();
-  
+   // create StartProgramView0rig and display start program view
+   StartProgramView startProgramView = new StartProgramView();
+  startProgramView.displayStartProgramView();
   
     } 
    
