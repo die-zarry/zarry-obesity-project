@@ -5,6 +5,10 @@
  */
 package citbyui.cit260.obesity.view;
 
+import byui.cit260.obesity.control.GameControl;
+import byui.cit260.obesity.model.Player;
+import java.util.Scanner;
+
 /**
  *
  * @author wdc
@@ -61,13 +65,55 @@ this.promptMessage = "\nPlease enter your name: ";
     }
 
     private String getPlayersName() {
-   System.out.println("\n*** doAction() called***");
-    return "sullen";
-    }
+     
+       Scanner keyboard = new Scanner (System.in); //get infile keyborad 
+       String  value = ""; // value to be return 
+       boolean valid = false; // initiallize to not valaid
+       
+       while (!valid) { // loop while invalid is entered
+       System.out.println("\n" + this.promptMessage);
+       
+       value = keyboard.nextLine();// get next line type on keyboard
+       value = value.trim(); // trim off leading and trailing blanks
+       
+       
+       if (value.length() < 1) { // value is blank
+           System.out.println("\nIvalid value: value can not be one blank");
+       continue;
+      
+       }
+       break; // end the loop
+       }
+       return value; // return the value entered
+    }    
+  
+
     private boolean doAction(String playersName) {
-        System.out.println("\n*** doAction() called***");
-    return true;
+        if (playersName.length() < 2) {
+       System.out.println("\nInvalid players name:"
+               + "The name must be gretaer than one character in length");
+        return false;
+         }
+    
+    // call createPlayer () control function
+    Player player = GameControl.createPlayer(playersName);
+    if(player == null){// if successful
+    System.out.println("\nError creating the player.");
+    return false;
+    }
+    // display next view
+    this.displayNextView();
+    return true; // sucess!
     }
 
-    
+    private void displayNextView() {
+    System.out.println("\n*** displayNextView () called ****");
+    }
 }
+ 
+
+
+      
+    
+
+
