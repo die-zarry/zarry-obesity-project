@@ -8,6 +8,7 @@ package citbyui.cit260.obesity.view;
 import byui.cit260.obesity.control.GameControl;
 import byui.cit260.obesity.model.Player;
 import java.util.Scanner;
+import static sun.audio.AudioPlayer.player;
 
 /**
  *
@@ -107,7 +108,20 @@ this.promptMessage = "\nPlease enter your name: ";
     }
 
     private void displayNextView() {
-    System.out.println("\n*** displayNextView () called ****");
+    
+     // display a custom welcome message
+     System.out.println("\n==================================="
+                       + "\n welcome to the game" + player.getName()
+                       +"\n we hope you have a lot of fun!"
+                       +"\n================================="
+                        );
+    // create MainMenuView object
+    MainMenuView mainMenuView = new MainMenuView();
+           
+     // Display the main menu view
+      mainMenuView.displayMainMenuView();
+    
+       
     }
 }
  
