@@ -120,6 +120,10 @@ this.promptMessage = "\nPlease enter your name: ";
            
      // Display the main menu view
       mainMenuView.displayMainMenuView();
+      
+     // create Help menu view object
+     HelpMenuView helpMenuView = new HelpMenuView();
+     helpMenuView.displayHelpMenuView();
     
        
     }

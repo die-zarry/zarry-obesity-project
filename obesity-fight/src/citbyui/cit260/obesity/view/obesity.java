@@ -5,10 +5,16 @@
  */
 package citbyui.cit260.obesity.view;
 
-import java.io.InputStream;
+import byui.cit260.obesity.model.Player;
 
 /**
  *
  * @author wdc
  */
+class obesity {
 
+    static Player getPlayer() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+}

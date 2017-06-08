@@ -5,6 +5,8 @@
  */
 package citbyui.cit260.obesity.view;
 
+import byui.cit260.obesity.control.GameControl;
+import byui.cit260.obesity.model.GameMenuView;
 import java.util.Scanner;
 
 /**
@@ -98,7 +100,10 @@ public class MainMenuView {
     }
 
     private void startNewGame() {
-       System.out.println("****startNewGame function ");
+       // create new game
+       GameControl.createNewGame(obesity.getPlayer());
+       // display the game menu
+    GameMenuView gameMenu = new GameMenuView ();
     }
 
     private void startExistingGame() {

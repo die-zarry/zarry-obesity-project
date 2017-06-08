@@ -5,6 +5,8 @@
  */
 package obesity.fight;
 
+import byui.cit260.obesity.model.Game;
+import byui.cit260.obesity.model.Player;
 import citbyui.cit260.obesity.view.StartProgramView;
 
 
@@ -17,10 +19,27 @@ import citbyui.cit260.obesity.view.StartProgramView;
  * @author wdc
  */
 public class Obesity {
+  private static Game currentGame = null;
+  private static Player player = null;
 
-    /**
-     * @param args the command line arguments
-     */
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        Obesity.currentGame = currentGame;
+    }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        Obesity.player = player;
+    }
+  
+  
+
     public static void main(String[] args) {
     
    // create StartProgramView0rig and display start program view

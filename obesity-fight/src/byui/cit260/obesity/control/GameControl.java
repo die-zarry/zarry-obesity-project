@@ -6,17 +6,40 @@
 package byui.cit260.obesity.control;
 
 import byui.cit260.obesity.model.Player;
+import byui.cit260.obesity.control.GameControl;
 
 /**
  *
  * @author wdc
  */
 public class GameControl {
+      
 
-    public static Player createPlayer(String playersName) {
-       System.out.println("n*** createPlayer () function called***");
+    public static Player createPlayer(String Name) { 
+        if(Name == null){
+        return null;
+       }
+    Player player = new Player ();
+    player.setName(Name);
+    
+    obesity.setPlayer(player);// save the palyer 
+    return player;
+    }
+public static void createNewGame(Player player){
+    System.out.println("\n *** displayMenu stub function called");
+}
+    private static class obesity {
+
+        private static void setPlayer(Player player) {
+            System.out.println("\n Display the gameContol");
+        }
+
+  
         
-     return new Player();
+
+        public obesity() {
+        }
     }
     
 }
+
