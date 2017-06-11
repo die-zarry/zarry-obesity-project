@@ -6,7 +6,7 @@
 package byui.cit260.obesity.control;
 
 import byui.cit260.obesity.model.Player;
-import byui.cit260.obesity.control.GameControl;
+
 
 /**
  *
@@ -15,31 +15,38 @@ import byui.cit260.obesity.control.GameControl;
 public class GameControl {
       
 
-    public static Player createPlayer(String Name) { 
-        if(Name == null){
-        return null;
-       }
+    public static Player createPlayer(String name) { 
+     if(name == null){
+         return null;
+    }
     Player player = new Player ();
-    player.setName(Name);
+    player.setName(name);
     
-    obesity.setPlayer(player);// save the palyer 
+    obesity.setPlayer(player);// save the player 
     return player;
     }
-public static void createNewGame(Player player){
-    System.out.println("\n *** displayMenu stub function called");
-}
+
+    public static void createNewGame(Player player) {
+      System.out.println("\n **** create New Game stub function called");
+    }
+
+    public static void createGameOjectif(Player player) {
+        System.out.println("\n**** dysplay stubb function () called*****");
+    }
+
+
+    
+
     private static class obesity {
 
         private static void setPlayer(Player player) {
             System.out.println("\n Display the gameContol");
         }
 
-  
-        
-
         public obesity() {
         }
     }
+   
     
 }
 

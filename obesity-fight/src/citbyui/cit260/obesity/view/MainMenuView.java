@@ -8,6 +8,7 @@ package citbyui.cit260.obesity.view;
 import byui.cit260.obesity.control.GameControl;
 import byui.cit260.obesity.model.GameMenuView;
 import java.util.Scanner;
+import obesity.fight.Obesity;
 
 /**
  *
@@ -15,7 +16,6 @@ import java.util.Scanner;
  */
 public class MainMenuView {
     private String menu;
-    private String promptMessage;
 
     public MainMenuView(){
     this.menu = "\n"
@@ -58,7 +58,7 @@ public class MainMenuView {
        boolean valid = false; // initiallize to not valaid
        
        while (!valid) { // loop while invalid is entered
-       System.out.println("\n" + this.promptMessage);
+       System.out.println("\n" + this.menu);
        
        value = keyboard.nextLine();// get next line type on keyboard
        value = value.trim(); // trim off leading and trailing blanks
@@ -75,14 +75,14 @@ public class MainMenuView {
     }    
         
      
-    private boolean doAction(String choice) {
+    public boolean doAction(String choice) {
         choice = choice.toUpperCase(); //convert choice to upper case
     switch (choice){
         case "N": // create and start a new game
               this.startNewGame();
               break;
-        case "G": // get and start an existing game
-              this.startExistingGame();
+        case "G": // create a new game menu view
+              this.createGameMenu();
               break;
         case "H": //display the help menu
                this.displayHelpMenu();
@@ -90,8 +90,12 @@ public class MainMenuView {
         case "S": // save curent game
                this.saveGame();
                break;
+        case "BMI": // display BMI range
+               this.displayBmiMenu();
+               break; 
+               
         default:
-             System.out.println("\n****Invalid selection**** try again");
+             System.out.println("\n**** Ivalid selection**** try again");
 
     }
         
@@ -100,23 +104,36 @@ public class MainMenuView {
     }
 
     private void startNewGame() {
-       // create new game
-       GameControl.createNewGame(obesity.getPlayer());
-       // display the game menu
-    GameMenuView gameMenu = new GameMenuView ();
+        // Create e new game
+       GameControl.createNewGame(Obesity.getPlayer());
+    
+      // display the game view
+       GameMenuView gameMenu = new GameMenuView();
+     gameMenu.dysplayMenu();
     }
-
-    private void startExistingGame() {
-     System.out.println("****startExistingGame function called ");   
+    private void createGameMenu() {
+        // Display the game Menu View
+     System.out.println("****createGame menu function called ");   
     }
-
+    
+ private void displayHelpMenu() {
+       GameControl.createNewGame(Obesity.getPlayer());
+       // dysplay help menu
+       HelpMenuView helpMenu = new HelpMenuView();
+       helpMenu.displayHelpMenuView();    }
+ 
     private void saveGame() {
-        System.out.println("****startExistingGame function called "); 
+        System.out.println("****saveGame function called "); 
     }
 
-    private void displayHelpMenu() {
-       System.out.println("****displayHelpmenu function called ");  
+    private void displayBmiMenu() {
+        GameControl.createNewGame(Obesity.getPlayer());
+       // dysplay BMI menu
+       BmiMenuView bmiMenu = new BmiMenuView();
+       bmiMenu.displayBmiMenuView();   
     }
+
+   
          
     
     

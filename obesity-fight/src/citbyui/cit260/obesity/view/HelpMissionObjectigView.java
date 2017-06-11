@@ -5,16 +5,16 @@
  */
 package citbyui.cit260.obesity.view;
 
-import byui.cit260.obesity.model.Player;
-
 /**
  *
  * @author wdc
  */
-class obesity {
-
-    static Player getPlayer() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+class HelpMissionObjectigView {
+    public void dysplayMenu (){
+        System.out.println("\n dysplay help menu***");
     }
-    
+
+    void dysplaymenu() {
+   System.out.println("\n  help menu***");    
+    }
 }

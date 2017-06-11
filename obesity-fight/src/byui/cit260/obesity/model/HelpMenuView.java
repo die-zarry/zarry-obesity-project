@@ -9,13 +9,8 @@ package byui.cit260.obesity.model;
  *
  * @author wdc
  */
-public class GameMenuView {
-    
-    
-
-    public void dysplayMenu() {
-        System.out.println("\n*** displayMenu stub function called ****");
-    }
-     
-    
+public class HelpMenuView {
+    public void dysplayMenu (){
+    System.out.println("\n dysplayMenu View  function called");
+}
 }

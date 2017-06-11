@@ -5,18 +5,15 @@
  */
 package citbyui.cit260.obesity.view;
 
-import byui.cit260.obesity.control.GameControl;
-import byui.cit260.obesity.model.GameMenuView;
 import java.util.Scanner;
+
 
 /**
  *
  * @author wdc
  */
-public class HelpMenuView {
-    
+public class HelpMenuView { 
     private String menu;
-    private String promptMessage;
     public HelpMenuView(){
     this.menu = "\n"
                 +"\n------------------------------------"
@@ -24,16 +21,12 @@ public class HelpMenuView {
                 +"\nL - The goal of the game"
                 +"\nC-  calorie amount per meal "
                 +"\nE - The level of exercice to burn an amount of calorie"
-                +"\nD - diet that is appropriate"
-                +"\nB-  how to interpret the body mass index" 
-                +"\nR - range og the body mass index"
-                +"\nQ - quit the game"
                 +"\n--------------------------------------";
             
             
             }
 
-    public void displayHelpMenuView() {
+     void displayHelpMenuView() {
       boolean done = false; // set flag to not done
         do{
             // prompt for  and get players name
@@ -56,7 +49,7 @@ public class HelpMenuView {
        boolean valid = false; // initiallize to not valaid
        
        while (!valid) { // loop while invalid is entered
-       System.out.println("\n" + this.promptMessage);
+       System.out.println("\n" + this.menu);
        
        value = keyboard.nextLine();// get next line type on keyboard
        value = value.trim(); // trim off leading and trailing blanks
@@ -74,28 +67,21 @@ public class HelpMenuView {
           
      private boolean doAction(String choice) {
         choice = choice.toUpperCase(); //convert choice to upper case
-    switch (choice){
+   
+        switch (choice){
         case "L": // the goal of the game
-              this.GoalOftheGame();
+              this.displayGoal();
               break;
         case "C": //calorie amount per meal
-               this.CalorieAmountMeal();
+               this.displayCalorieAmount();
                break;
         case "E": // the level of exercice to be burn per execice
-               this.LeveoOfExercice();
+               this.displayExerciceLevel();
                break;
-        case "D": // the appropriate diet definition
-              this.DietDefintion();
-              break;
-        case "B": //The interpretation of BMI
-            this.interpretationBmi();
+               
+        case "I": // the range Body mass Index
+               this.displayBmi();
                break;
-        case "R": // range of BMI
-               this.rangeOfBmi();
-               break;
-        case "Q": // quit the game
-              this.QuitGame();
-              break;
                
         default:
              System.out.println("\n****Invalid selection**** try again");
@@ -106,33 +92,26 @@ public class HelpMenuView {
     
     }  
 
-
-    private void GoalOftheGame() {
-      System.out.println("****startExistingGame function called "); 
+    
+    private void displayGoal() {
+       System.out.println("**** displayGoal function called ***");  
     }
 
-    private void CalorieAmountMeal() {
-      System.out.println("****startExistingGame function called ");
+    private void displayCalorieAmount() {
+       System.out.println("**** displayCalorieAmount function called ***");  
     }
 
-    private void LeveoOfExercice() {
-    System.out.println("****startExistingGame function called ");    
+    private void displayExerciceLevel() {
+        System.out.println("**** displayExercice function called ***"); 
     }
 
-    private void DietDefintion() {
-     System.out.println("****startExistingGame function called ");  
+    private void displayBmi() {
+     System.out.println("**** displayBmi function called ***");   
     }
 
-    private void interpretationBmi() {
-       System.out.println("****startExistingGame function called "); 
-    }
-
-    private void rangeOfBmi() {
-        System.out.println("****startExistingGame function called ");
-    }
-
-    private void QuitGame() {
-      System.out.println("****startExistingGame function called ");  
-    }
     
 }
+
+    
+    
+

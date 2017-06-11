@@ -104,15 +104,15 @@ this.promptMessage = "\nPlease enter your name: ";
     }
     // display next view
     this.displayNextView();
-    return true; // sucess!
+    return true; // success!
     }
 
     private void displayNextView() {
     
      // display a custom welcome message
      System.out.println("\n==================================="
-                       + "\n welcome to the game" + player.getName()
-                       +"\n we hope you have a lot of fun!"
+                       + "\n Welcome to the game" + player.getName()
+                       +"\n We hope you have a lot of fun!"
                        +"\n================================="
                         );
     // create MainMenuView object
@@ -123,8 +123,13 @@ this.promptMessage = "\nPlease enter your name: ";
       
      // create Help menu view object
      HelpMenuView helpMenuView = new HelpMenuView();
+     // display Help menu 
      helpMenuView.displayHelpMenuView();
     
+    // create Body Mass Index menu(BMI) view object
+     BmiMenuView bmiMenuView = new BmiMenuView();
+     // display Help menu 
+     bmiMenuView.displayBmiMenuView();
        
     }
 }
