@@ -119,17 +119,17 @@ this.promptMessage = "\nPlease enter your name: ";
     MainMenuView mainMenuView = new MainMenuView();
            
      // Display the main menu view
-      mainMenuView.displayMainMenuView();
+      mainMenuView.display();
       
      // create Help menu view object
      HelpMenuView helpMenuView = new HelpMenuView();
      // display Help menu 
-     helpMenuView.displayHelpMenuView();
+     helpMenuView.display();
     
     // create Body Mass Index menu(BMI) view object
      BmiMenuView bmiMenuView = new BmiMenuView();
      // display Help menu 
-     bmiMenuView.displayBmiMenuView();
+     bmiMenuView.display();
        
     }
 }
