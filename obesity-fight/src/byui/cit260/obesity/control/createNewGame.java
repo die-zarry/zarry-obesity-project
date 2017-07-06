@@ -3,20 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byui.cit260.obesity.model;
+package byui.cit260.obesity.control;
 
 /**
  *
  * @author wdc
  */
-public class GameMenuView {
-    
-    
-
-    public void dysplayMenu() {
-        System.out.println("\n*** displayMenu stub function called ****");
-    }
-     
+public class createNewGame {
     
 }
-

@@ -72,6 +72,10 @@ public class Player implements Serializable{
         }
         return true;
     }
+
+    public void setPlayer(Player player) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
     

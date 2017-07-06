@@ -11,10 +11,10 @@ import java.util.Scanner;
  *
  * @author wdc
  */
-public class BmiMenuView {
-private String menu;
+public class BmiMenuView extends View {
+
 public BmiMenuView(){
-this.menu = "\n"
+               super ("\n                            n"
                 +"\n------------------------------------"
                 + "\n| Main Menu                         |"
                 +"\nM-  range of body mass Index (BMI)"
@@ -24,79 +24,15 @@ this.menu = "\n"
                 +"\nB1-  with a BMI of : your're obese with type I" 
                 +"\nB2 - with a BMI of : you're you're obese with type II"
                 +"'nB3  -with a BMI of : you're you're obese with type 3"
-                +"\n--------------------------------------";
+                +"\n--------------------------------------");
             
             
             }
 
-   public void displayBmiMenuView() {
-     boolean done = false; // set flag to not done
-        do{
-            // prompt for  and get players name
-            String menuOption = this.getMenuOption();
-            if(menuOption.toUpperCase().equals("Q"))// user wants to quit
-            return; // exit the game
-            
-            // do the requested action and display the next view
-            done = this.doAction(menuOption);
-        }while(!done);  
-    }
-
-    private String getMenuOption() {
-         /*
-        *ok get this to the getplayersAnme ()function
-        */
-         Scanner keyboard = new Scanner (System.in); //get infile keyborad 
-       String  value = ""; // value to be return 
-       boolean valid = false; // initiallize to not valaid
-       
-       while (!valid) { // loop while invalid is entered
-       System.out.println("\n" + this.menu);
-       
-       value = keyboard.nextLine();// get next line type on keyboard
-       value = value.trim(); // trim off leading and trailing blanks
-       
-       
-       if (value.length() < 1) { // value is blank
-           System.out.println("\nIvalid value: value can not be one blank");
-       continue;
-      
-       }
-       break; // end the loop
-       }
-       return value; // return the value entered
-    }
-
-    private boolean doAction(String choice) {
-    choice = choice.toUpperCase(); //convert choice to upper case
-   
-        switch (choice){
-        case "m": // BMI range
-              this.displayBmiRange();
-              break;
-        case "U": // Underweight BMI
-               this.displayUnderweight();
-               break;
-        case "O": // overweight BMi
-               this.displayOverweight();
-               break;
-        case "B": // obese BMI  
-              this.displayObese();
-              break;
-        case "B1": //obesity type one
-               this.displayObeseFirst();
-               break;
-        case "B2": // obesity type two
-               this.displayObeseSecond();
-               break; 
-               
-        case "B3": // obesity type three
-               this.displayObeseThird();
-               break;
-        default:
-             System.out.println("\n****Invalid selection**** try again");
-
-    }
+     @Override
+    public boolean doAction(String value) {
+        
+    value = value.toUpperCase();
         
         return false;
     

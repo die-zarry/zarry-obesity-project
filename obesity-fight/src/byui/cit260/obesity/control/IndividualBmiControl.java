@@ -22,4 +22,8 @@ double BMI = (weight *703) / (height * height); {
 return BMI;
         }
 }
+
+    public void displayIndividualBmiControl() {
+        System.out.println("n displayIndividualBmiControl() function called");
+    }
 }

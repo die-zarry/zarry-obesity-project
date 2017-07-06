@@ -47,5 +47,11 @@ public class Obesity {
   startProgramView.displayStartProgramView();
   
     } 
-   
+
+    public static Player getInput() {
+        System.out.println("\n***displaygetInput() function called****");
+      return null;
+      
+    }
+
 }

@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 package byui.cit260.obesity.model;
+import byui.cit260.obesity.control.GameControl;
 import java.io.Serializable;
+import java.util.Map;
 
 /**
  *
@@ -14,7 +16,28 @@ public class Game implements Serializable{
     
    private int noPeople;
    private double totalTime;
+   private Player player;
+   private Map map;
+   private Body body;
+   public InventoryItem[] inventory;
 
+    public Body getBody() {
+        return body;
+    }
+
+    public void setBody(Body body) {
+        this.body = body;
+    }
+
+    public InventoryItem[] getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(InventoryItem[] inventory) {
+        this.inventory = inventory;
+    }
+   
+ 
     public Game() {
     }
    
@@ -73,7 +96,30 @@ public class Game implements Serializable{
         }
         return true;
     }
+
+    public void setPlayer(Player player) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
+    
+   
+
+    private static class Body {
+
+        public Body() {
+        }
+    }
+
+    private static class InventoryItem {
+
+        public InventoryItem() {
+        }
+    }
+
+    
+    }
    
    
     
-}
+

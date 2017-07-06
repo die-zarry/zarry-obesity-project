@@ -36,10 +36,31 @@ public class MainMenuView extends View {
      *
      */
      @Override 
-    public boolean doAction(String value) {
-        value = value.toUpperCase(); // convert to all upper case
-               return false;
+    public boolean doAction(String choice) {
+        choice = choice.toUpperCase(); //convert choice to upper case
+    switch (choice){
+        case "N": // create and start a new game
+              this.startNewGame();
+              break;
+        case "G": // create a new game menu view
+              this.createGameMenu();
+              break;
+        case "H": //display the help menu
+               this.displayHelpMenu();
+               break;
+        case "S": // save curent game
+               this.saveGame();
+               break;
+        case "BMI": // display BMI range
+               this.displayBmiMenu();
+               break; 
+             
+        default:
+             System.out.println("\n**** Ivalid selection**** try again");
+
+    }
         
+        return false;
     
     }
     private void startNewGame() {
