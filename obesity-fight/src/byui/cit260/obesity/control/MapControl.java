@@ -5,7 +5,11 @@
  */
 package byui.cit260.obesity.control;
 
+import byui.cit260.obesity.model.Actor;
+import citbyui.cit260.obesity.exceptions.MapControlException;
+import java.awt.Point;
 import java.util.Map;
+import obesity.fight.Obesity;
 
 /**
  *
@@ -17,8 +21,17 @@ class MapControl {
       System.out.println("\n**** MapCreateMap() functioncalled");  
     }
 
-    static void moveActorsToStartingLocation(Map map) {
-       System.out.println("\n*******moveActorsToStarting () functioncalled");
-    }
+    public static void moveActorToLocation(Actor actor, Point coordinates) 
+            throws MapControlException {
+     ;
     
-}
+      
+      }
+     
+  
+    
+    }
+
+
+    
+
